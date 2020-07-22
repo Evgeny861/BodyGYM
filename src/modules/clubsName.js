@@ -1,10 +1,10 @@
-const clubsList = document.querySelector('.clubs-list'),
-clubItems = document.getElementById('club-items'),
-headerMain = document.querySelector('.header-main');
 
 const clubsName = () => {
+    const clubItems = document.getElementById('club-items'),
+        body = document.querySelector('body');
 
-    headerMain.addEventListener('click', (e) => {
+
+        body.addEventListener('click', (e) => {
         let target = event.target;
         if (target.closest('.clubs-list')) {
             if (!clubItems.style.display || clubItems.style.display === 'none') {
@@ -12,17 +12,17 @@ const clubsName = () => {
             } else if (clubItems.style.display === 'block'){
                 clubItems.style.display = 'none';
             }
-        } else if (!target.closest('.clubs-list') && clubItems.style.display === 'block'){
+        } else {
             clubItems.style.display = 'none';
         }
-        
+        if (target.dataset.popup) {
+            document.querySelector(`${target.dataset.popup}`).style.display = 'block';
+        } else if (target.closest('.overlay')){
+            target.parentNode.style.display = 'none';
+        } else if (target.closest('.close_icon')) {
+            target.parentNode.parentNode.parentNode.style.display = 'none';
+        }
     });
-    
-
-
-
-
-
 };
 
 
