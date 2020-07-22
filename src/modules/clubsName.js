@@ -4,7 +4,7 @@ const clubsName = () => {
         body = document.querySelector('body');
 
 
-        body.addEventListener('click', (e) => {
+    body.addEventListener('click', (e) => {
         let target = event.target;
         if (target.closest('.clubs-list')) {
             if (!clubItems.style.display || clubItems.style.display === 'none') {
@@ -14,21 +14,20 @@ const clubsName = () => {
             }
         } else {
             clubItems.style.display = 'none';
-        }
+        }   
 
         if (target.dataset.popup) {
             document.querySelector(`${target.dataset.popup}`).style.display = 'block';
         } else if (target.closest('.overlay')){
             target.parentNode.style.display = 'none';
-        } else if (target.closest('.close_icon')) {
+        } else if (target.closest('.close_icon') || target.closest('.close-btn')) {
             target.parentNode.parentNode.parentNode.style.display = 'none';
-        }
-
+        }   
+        console.log(target);
         if (target.closest('.fixed-gift')) {
-            console.log(target);
             document.getElementById('gift').style.display = 'block';
             document.querySelector('.fixed-gift').style.display = 'none';
-        }        
+        }      
     });
 };
 

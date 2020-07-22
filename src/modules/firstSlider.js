@@ -3,7 +3,10 @@ const firstSlider = () => {
         slide = slider.querySelectorAll('.slide'),
         wrapper = document.getElementById('wrapper-slider');
 
-        wrapper.style.paddingTop = '1px';
+        if(wrapper){
+            wrapper.style.paddingTop = '1px';
+        }
+
 
     let currentSlide = 0;
 

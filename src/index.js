@@ -7,6 +7,7 @@ elementClosest(window);
 
 import clubsName from './modules/clubsName';
 import firstSlider from './modules/firstSlider';
+import burgerMenu from './modules/burgerMenu';
 
 
 
@@ -14,3 +15,5 @@ import firstSlider from './modules/firstSlider';
 clubsName();
 // Слайдер 
 firstSlider();
+// burgerMenu
+burgerMenu();
