@@ -9,7 +9,7 @@ const burgerMenu = () => {
         } else {
             topMenu.style.position = '';
         }
-        if(window.scrollY > 740){
+        if(window.scrollY > 700){
             arrow.style.display = 'block';
         } else {
             arrow.style.display = 'none';

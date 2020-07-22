@@ -9,6 +9,7 @@ import clubsName from './modules/clubsName';
 import firstSlider from './modules/firstSlider';
 import burgerMenu from './modules/burgerMenu';
 import forms from "./modules/forms";
+import carousel from "./modules/carousel";
 
 
 
@@ -20,3 +21,5 @@ firstSlider();
 burgerMenu();
 // Валидация для форм
 forms();
+//  Карусель
+carousel();

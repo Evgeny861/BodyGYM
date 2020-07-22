@@ -12,7 +12,6 @@ const forms = () => {
             
         }
     }
-    console.log(document.querySelectorAll('.personal-data'));
 
 
 
