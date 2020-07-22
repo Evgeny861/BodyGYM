@@ -8,6 +8,7 @@ elementClosest(window);
 import clubsName from './modules/clubsName';
 import firstSlider from './modules/firstSlider';
 import burgerMenu from './modules/burgerMenu';
+import forms from "./modules/forms";
 
 
 
@@ -17,3 +18,5 @@ clubsName();
 firstSlider();
 // burgerMenu
 burgerMenu();
+// Валидация для форм
+forms();

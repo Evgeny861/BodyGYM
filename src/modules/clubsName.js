@@ -23,7 +23,6 @@ const clubsName = () => {
         } else if (target.closest('.close_icon') || target.closest('.close-btn')) {
             target.parentNode.parentNode.parentNode.style.display = 'none';
         }   
-        console.log(target);
         if (target.closest('.fixed-gift')) {
             document.getElementById('gift').style.display = 'block';
             document.querySelector('.fixed-gift').style.display = 'none';
