@@ -27,6 +27,7 @@ const clubsName = () => {
             document.getElementById('gift').style.display = 'block';
             document.querySelector('.fixed-gift').style.display = 'none';
         }      
+        
     });
 };
 
