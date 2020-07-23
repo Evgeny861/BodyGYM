@@ -14,7 +14,7 @@ const calc = () => {
                     priceTotal.textContent = 1999;
 
         }
-        if(calcForm){
+        if(mozaika){
             calcForm.addEventListener('click', () => {
         if(mozaika.checked ){
             if(m1.checked ){
@@ -42,8 +42,8 @@ const calc = () => {
         if(promo.value === 'ТЕЛО2019'){
             priceTotal.textContent = Math.floor(priceTotal.textContent - (priceTotal.textContent * 30 / 100));
         }
-    })
-        }
+        })
+    }
     
 }
 

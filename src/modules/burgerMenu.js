@@ -1,6 +1,8 @@
 const burgerMenu = () => {
     const topMenu = document.querySelector('.top-menu'),
-        arrow = document.getElementById('totop');
+        arrow = document.getElementById('totop'),
+        body = document.querySelector('body');
+
     arrow.style.display = 'none';
 
     window.addEventListener('scroll', () => {
@@ -14,7 +16,20 @@ const burgerMenu = () => {
         } else {
             arrow.style.display = 'none';
         }
+        
     });
+    body.addEventListener('click', (e) => {
+        if(topMenu){
+            if(event.target.closest('.burger')){
+                document.querySelector('.popup-menu').style.display = 'flex';
+            }
+            if(event.target.closest('a') || event.target === document.querySelector('.popup-menu').querySelector('img')){
+                document.querySelector('.popup-menu').style.display = 'none';
+            }
+        }
+        
+    })
+    
 
 
 
