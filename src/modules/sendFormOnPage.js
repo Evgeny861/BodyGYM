@@ -39,7 +39,8 @@ document.getElementById('banner-form').addEventListener('submit', event => {
 
     const deliteMessage = () => {
         if (statusMessage) {
-            form1.removeChild(statusMessage);
+            statusMessage.textContent = '';
+            // form1.removeChild(statusMessage);
         }
             };
             setTimeout(deliteMessage, 2000);
@@ -74,7 +75,8 @@ document.getElementById('banner-form').addEventListener('submit', event => {
         form1.appendChild(statusMessage);
         const deliteMessage = () => {
             if (statusMessage) {
-                form1.removeChild(statusMessage);
+                statusMessage.textContent = '';
+                // form1.removeChild(statusMessage);
             }
                 };
                 setTimeout(deliteMessage, 3000);
