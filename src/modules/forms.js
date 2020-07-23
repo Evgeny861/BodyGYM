@@ -44,7 +44,6 @@ const forms = () => {
                 if (input.name === 'name' && !(input.placeholder === "Промокод")){
                 input.value = input.value.replace(/[^А-Яа-яёЁ\s]/, '');
                 } else if (input.name === 'phone') {
-                    console.log(input );
                     maskPhone(`#${input.id}`);
                 }
             });
