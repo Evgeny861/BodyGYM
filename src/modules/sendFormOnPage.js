@@ -42,8 +42,8 @@ document.getElementById('banner-form').addEventListener('submit', event => {
             statusMessage.textContent = '';
             // form1.removeChild(statusMessage);
         }
-            };
-            setTimeout(deliteMessage, 2000);
+    };
+            // setTimeout(deliteMessage, 2000);
         
             const postData = body =>
                 fetch('./server.php', {
@@ -59,7 +59,7 @@ document.getElementById('banner-form').addEventListener('submit', event => {
                     if (response.status !== 200) {
                         throw new Error('status network not 200');
                     }
-                    statusMessage.textContent = successMessage;
+                    statusMessage.textContent = '';
                     document.getElementById('thanks').style.display = 'block';
                     document.getElementById('check1').checked = false;
                 })
@@ -79,7 +79,7 @@ document.getElementById('banner-form').addEventListener('submit', event => {
                 // form1.removeChild(statusMessage);
             }
                 };
-                setTimeout(deliteMessage, 3000);
+                setTimeout(deliteMessage, 4000);
     }
     
         
@@ -110,12 +110,8 @@ form2.addEventListener('submit', event => {
         }
     }
 
-    const deliteMessage = () => {
-        if (statusMessage) {
-            form2.removeChild(statusMessage);
-        }
-            };
-            setTimeout(deliteMessage, 2000);
+
+    
         
             const postData = body =>
                 fetch('./server.php', {
@@ -135,6 +131,14 @@ form2.addEventListener('submit', event => {
                     statusMessage.textContent = successMessage;
                     document.getElementById('thanks').style.display = 'block';
                     document.getElementById('check1').checked = false;
+
+                    const deliteMessage = () => {
+                        if (statusMessage) {
+                            form2.removeChild(statusMessage);
+                        }
+                    };
+                    setTimeout(deliteMessage, 5000);
+                
                 })
                 .catch(error => {
                     console.log(body.checked);

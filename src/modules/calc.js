@@ -9,6 +9,7 @@ const calc = () => {
         m4 = document.getElementById('m4'),
         schelkovo = document.getElementById('card_leto_schelkovo'),
         promo = document.getElementById('promo');
+        
 
         priceTotal.textContent = 1999;
 
