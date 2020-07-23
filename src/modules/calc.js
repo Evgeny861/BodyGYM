@@ -9,11 +9,13 @@ const calc = () => {
         m4 = document.getElementById('m4'),
         schelkovo = document.getElementById('card_leto_schelkovo'),
         promo = document.getElementById('promo');
-        
 
-        priceTotal.textContent = 1999;
+        if(priceTotal){
+                    priceTotal.textContent = 1999;
 
-    calcForm.addEventListener('click', () => {
+        }
+        if(calcForm){
+            calcForm.addEventListener('click', () => {
         if(mozaika.checked ){
             if(m1.checked ){
                 priceTotal.textContent = 1999
@@ -41,6 +43,8 @@ const calc = () => {
             priceTotal.textContent = Math.floor(priceTotal.textContent - (priceTotal.textContent * 30 / 100));
         }
     })
+        }
+    
 }
 
 

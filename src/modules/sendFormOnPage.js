@@ -13,7 +13,7 @@ const statusMessage = document.createElement('div');
 statusMessage.classList.add('status-message');
 statusMessage.style.cssText = 'font-size: 2rem;';
 
-document.getElementById('banner-form').addEventListener('submit', event => {
+form1.addEventListener('submit', event => {
     event.preventDefault();
     if (document.getElementById('check1').checked === true){
 
@@ -32,7 +32,7 @@ document.getElementById('banner-form').addEventListener('submit', event => {
     }
     const input = form1.querySelectorAll('input');
     for (let i = 0; i < input.length; i++) {
-        if (input[i].value !== '') {
+        if (input[i].value !== '' && input[i].type !== 'radio') {
             input[i].value = '';
         }
     }
@@ -79,7 +79,7 @@ document.getElementById('banner-form').addEventListener('submit', event => {
                 // form1.removeChild(statusMessage);
             }
                 };
-                setTimeout(deliteMessage, 4000);
+                setTimeout(deliteMessage, 2000);
     }
     
         
@@ -105,14 +105,10 @@ form2.addEventListener('submit', event => {
     }
     const input = form2.querySelectorAll('input');
     for (let i = 0; i < input.length; i++) {
-        if (input[i].value !== '') {
+        if (input[i].value !== '' && input[i].type !== 'radio') {
             input[i].value = '';
         }
     }
-
-
-    
-        
             const postData = body =>
                 fetch('./server.php', {
                     method: 'POST',
@@ -127,8 +123,7 @@ form2.addEventListener('submit', event => {
                     if (response.status !== 200) {
                         throw new Error('status network not 200');
                     }
-                    console.log(body);
-                    statusMessage.textContent = successMessage;
+                    statusMessage.textContent = '';
                     document.getElementById('thanks').style.display = 'block';
                     document.getElementById('check1').checked = false;
 
@@ -141,7 +136,6 @@ form2.addEventListener('submit', event => {
                 
                 })
                 .catch(error => {
-                    console.log(body.checked);
                     statusMessage.textContent = errorMessage;
                     document.getElementById('thanks').querySelector('h4').textContent = 'Извините';
                     document.getElementById('thanks').querySelector('p').textContent = statusMessage.textContent;

@@ -26,6 +26,6 @@ forms();
 //  Карусель
 carousel();
 // Отправка Форм
-sendFormOnPage(); 
+sendFormOnPage();  
 // Калькулятор
 calc();
