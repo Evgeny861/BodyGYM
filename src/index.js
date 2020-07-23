@@ -25,4 +25,4 @@ forms();
 //  Карусель
 carousel();
 // Отправка Форм
-sendFormOnPage(form1); 
+sendFormOnPage(); 

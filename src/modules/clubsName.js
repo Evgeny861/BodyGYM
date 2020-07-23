@@ -18,6 +18,7 @@ const clubsName = () => {
 
         if (target.dataset.popup) {
             document.querySelector(`${target.dataset.popup}`).style.display = 'block';
+            console.log(target.dataset);
         } else if (target.closest('.overlay')){
             target.parentNode.style.display = 'none';
         } else if (target.closest('.close_icon') || target.closest('.close-btn')) {
