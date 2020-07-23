@@ -11,6 +11,7 @@ import burgerMenu from './modules/burgerMenu';
 import forms from "./modules/forms";
 import carousel from "./modules/carousel";
 import sendFormOnPage from "./modules/sendFormOnPage";
+import calc from "./modules/calc";
 
 
 
@@ -26,3 +27,5 @@ forms();
 carousel();
 // Отправка Форм
 sendFormOnPage(); 
+// Калькулятор
+calc();
