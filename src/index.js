@@ -10,6 +10,7 @@ import firstSlider from './modules/firstSlider';
 import burgerMenu from './modules/burgerMenu';
 import forms from "./modules/forms";
 import carousel from "./modules/carousel";
+import sendFormOnPage from "./modules/sendFormOnPage";
 
 
 
@@ -23,3 +24,5 @@ burgerMenu();
 forms();
 //  Карусель
 carousel();
+// Отправка Форм
+sendFormOnPage(form1); 
