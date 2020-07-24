@@ -10,7 +10,6 @@ import firstSlider from './modules/firstSlider';
 import burgerMenu from './modules/burgerMenu';
 import forms from "./modules/forms";
 import carousel from "./modules/carousel";
-import sendFormOnPage from "./modules/sendFormOnPage";
 import calc from "./modules/calc";
 import gallery from "./modules/gallery";
 import sendForms from "./modules/sendForms";
@@ -26,8 +25,6 @@ burgerMenu();
 forms();
 //  Карусель
 carousel();
-// Отправка Форм
-sendFormOnPage();  
 // Калькулятор
 calc();
 // Фотогалерея
