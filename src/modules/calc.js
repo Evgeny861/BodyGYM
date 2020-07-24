@@ -15,7 +15,7 @@ const calc = () => {
 
         }
         if(mozaika){
-            calcForm.addEventListener('click', () => {
+            calcForm.addEventListener('input', () => {
         if(mozaika.checked ){
             if(m1.checked ){
                 priceTotal.textContent = 1999

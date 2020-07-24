@@ -12,7 +12,8 @@ import forms from "./modules/forms";
 import carousel from "./modules/carousel";
 import sendFormOnPage from "./modules/sendFormOnPage";
 import calc from "./modules/calc";
-
+import gallery from "./modules/gallery";
+import sendForms from "./modules/sendForms";
 
 
 // вызываю poputs 
@@ -29,3 +30,7 @@ carousel();
 sendFormOnPage();  
 // Калькулятор
 calc();
+// Фотогалерея
+gallery();
+//  формы из модальных форм
+sendForms();
