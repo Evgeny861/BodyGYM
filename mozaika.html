@@ -324,22 +324,40 @@
     <h2>Фотогалерея</h2>
     <div class="gallery-bg">
         <div class="wrapper">
-            <div class="gallery-slider">
-                <div class="slide">
+            <div class="gallery-slider" style="position: relative;">
+                <div class="slide" style="display: flex;">
                     <img src="images/gallery/photo1.jpg" alt="">
                 </div>
-                <div class="slide">
+                <div class="slide"  style="display: none;">
                     <img src="images/gallery/photo2.jpg" alt="">
                 </div>
-                <div class="slide">
+                <div class="slide" style="display: none;">
                     <img src="images/gallery/photo3.jpg" alt="">
                 </div>
-                <div class="slide">
+                <div class="slide" style="display: none;">
                     <img src="images/gallery/photo4.jpg" alt="">
                 </div>
-                <div class="slide">
+                <div class="slide" style="display: none;">
                     <img src="images/gallery/photo5.jpg" alt="">
                 </div>
+                <div class="slider-arrow prev" id="arrow-left">
+                    <span>
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="slider-arrow next" id="arrow-right">
+                    <span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </div>
+			    <ul class="slider-dots">
+			    	<li class=""><button class="dotBtn"></button></li>
+			    	<li class=""><button class="dotBtn"></button></li>
+			    	<li class=""><button class="dotBtn"></button></li>
+			    	<li class=""><button class="dotBtn"></button></li>
+			    	<li class=""><button class="dotBtn"></button></li>
+			    </ul>
+
             </div>
         </div>
     </div>
