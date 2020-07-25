@@ -360,12 +360,14 @@
                     </label>
                     </div>
                     <div class="price">
-                        <div class="price-message input-text"><input name="name" type="text" id="promo" 
+                        <div class="price-message input-text"><input name="name" type="text" id="promo" class="promoText"
                                                                      placeholder="Промокод"></div>
                         <div class="price-message">Цена:</div>
                         <div class="price-message" id="price-total">2999</div>
                     </div>
-                    <input type="hidden" name="form_name" value="Заказать карту">
+                    <input type="hidden" name="form_name" value="Заказать карту" >
+                    <input type="hidden" name="form_promo" class="promoHidden" value="Нет скидки">
+
                     <p class="input-text"><input name="name" type="text" required placeholder="Ваше имя..."></p>
                     <p class="input-text"><input type="tel" name="phone" id="callback_form-phone" required
                                                  placeholder="Ваш номер телефона..."></p>

@@ -23,8 +23,8 @@ const sendForms = () => {
         event.preventDefault();
         if (form !== footerForm)  {
             for (let inp of form.querySelectorAll('input')){
-                if (inp.type === "checkbox" && form !== footerForm){
-                    if (inp.checked && form !== footerForm) {
+                if (inp.type === "checkbox"){
+                    if (inp.checked) {
                         form.appendChild(statusMessage);
                     
                         const formData = new FormData(form);
@@ -124,7 +124,6 @@ const sendForms = () => {
                     statusMessage.textContent = '';
                 })
                 .catch(error => {
-                    console.log(body);
                     document.getElementById('thanks').querySelector('h4').textContent = 'Извините';
                     document.getElementById('thanks').querySelector('p').textContent = statusMessage.textContent;
                     document.getElementById('thanks').style.display = 'block';
