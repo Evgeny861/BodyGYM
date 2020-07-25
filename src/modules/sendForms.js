@@ -56,12 +56,18 @@ const send = form => {
                         }
                         document.getElementById('thanks').style.display = 'block';
                         statusMessage.textContent = '';
+                        if (form.parentNode.parentNode.parentNode.classList.contains('popup')) {
+                            form.parentNode.parentNode.parentNode.style.display = 'none';
+                        }
                     })
                     .catch(error => {
                         statusMessage.textContent = errorMessage;
                         document.getElementById('thanks').querySelector('h4').textContent = 'Извините';
                         document.getElementById('thanks').querySelector('p').textContent = statusMessage.textContent;
                         document.getElementById('thanks').style.display = 'block';
+                        if (form.parentNode.parentNode.parentNode.classList.contains('popup')) {
+                            form.parentNode.parentNode.parentNode.style.display = 'none';
+                        }
                         statusMessage.textContent = '';
                     });
                     for (let i = 0; i < input.length; i++) {
