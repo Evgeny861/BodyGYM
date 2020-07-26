@@ -1,6 +1,6 @@
 const gallery = () => {
     const slider = document.querySelector('.gallery-slider'),
-    dot = document.querySelectorAll('.dotBtn'),
+    dot = document.querySelectorAll('.dot'),
     slide = slider.querySelectorAll('.slide'),
     li = slider.querySelectorAll('li');
 
@@ -47,7 +47,7 @@ slider.addEventListener('click', event => {
     event.preventDefault();
 
     const target = event.target;
-    if (!target.closest('.slider-arrow, .dotBtn')) {
+    if (!target.closest('.slider-arrow, .dot')) {
         return;
     }
 
@@ -58,7 +58,7 @@ slider.addEventListener('click', event => {
         currentSlide++;
     } else if (target.closest('#arrow-left')) {
         currentSlide--;
-    } else if (target.closest('.dotBtn')) {
+    } else if (target.closest('.dot')) {
         dot.forEach((elem, index) => {
             if (elem === target) {
                 currentSlide = index;
@@ -77,13 +77,13 @@ slider.addEventListener('click', event => {
 
 slider.addEventListener('mouseover', event => {
     if (event.target.closest('.slider-arrow') ||
-    event.target.closest('.dotBtn')) {
+    event.target.closest('.dot')) {
         stopSlide();
     }
 });
 slider.addEventListener('mouseout', event => {
     if (event.target.closest('.slider-arrow') ||
-    event.target.closest('.dotBtn')) {
+    event.target.closest('.dot')) {
         startSlide();
     }
 });

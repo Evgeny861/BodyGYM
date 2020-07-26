@@ -39,6 +39,10 @@ const calc = () => {
             }
         }
 
+        if (promo.value !== 'ТЕЛО2019') {
+            document.querySelector('.promoHidden').value = "Скидки нет";
+        }
+
         if(promo.value === 'ТЕЛО2019'){
             document.querySelector('.promoHidden').value = "Скидка 30%";
             priceTotal.textContent = Math.floor(priceTotal.textContent - (priceTotal.textContent * 30 / 100));
