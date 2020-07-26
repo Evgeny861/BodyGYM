@@ -4,9 +4,9 @@ const carousel = () => {
         prev = document.querySelector('.prev'),
         next = document.querySelector('.next');
 
-    let count = 0;
+    
     sliders[0].style.cssText = `transition: all 0.2s linear 0s; min-width: 210px; margin-left: 0px;`;
-
+    let count = 0;
     servicesSlider.addEventListener('click', (e) => {
       if (!event.target.closest('.slider-arrow')){
         return
