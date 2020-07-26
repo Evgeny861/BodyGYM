@@ -20,7 +20,6 @@ const carousel = () => {
             sliders[0].style.cssText = `transition: all 0.2s linear 0s; min-width: 210px; margin-left: -${count}px;`;
           }
         } else if (event.target.closest('.prev')) {
-          console.log(count);
           count += -225;
           sliders[0].style.cssText = `transition: all 0.2s linear 0s; min-width: 210px; margin-left: -${count}px;`;
           if (count < 0) {
