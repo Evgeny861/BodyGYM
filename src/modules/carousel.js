@@ -14,7 +14,6 @@ const carousel = () => {
         if(event.target.closest('.next')){
           count += 225;
           sliders[0].style.cssText = `transition: all 0.2s linear 0s; min-width: 210px; margin-left: -${count}px;`;
-          console.log(count);
           if (count > 1125) {
             count = 0;
             sliders[0].style.cssText = `transition: all 0.2s linear 0s; min-width: 210px; margin-left: -${count}px;`;
