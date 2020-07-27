@@ -76,7 +76,10 @@ const sendForms = () => {
                                         document.getElementById('m1').checked = true;
                                         document.getElementById('price-total').textContent = 1999;
                                         document.getElementById('card_leto_mozaika').checked = true;
-                                    }    
+                                    }   
+                                    if (document.getElementById('t1')) {
+                                        document.getElementById('t1').checked = true;
+                                    }
                                     input[i].value = '';
                                 }
                             }
