@@ -11,8 +11,7 @@ const calc = () => {
         promo = document.getElementById('promo');
 
         if(priceTotal){
-                    priceTotal.textContent = 1999;
-
+            priceTotal.textContent = 1999;
         }
         if(mozaika){
             calcForm.addEventListener('input', () => {

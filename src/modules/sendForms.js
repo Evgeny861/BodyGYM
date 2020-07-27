@@ -72,6 +72,11 @@ const sendForms = () => {
                             });
                             for (let i = 0; i < input.length; i++) {
                                 if (input[i].value !== '' && input[i].type !== 'radio' && input[i].type !== 'hidden') {
+                                    if (document.getElementById('promo')) {
+                                        document.getElementById('m1').checked = true;
+                                        document.getElementById('price-total').textContent = 1999;
+                                        document.getElementById('card_leto_mozaika').checked = true;
+                                    }    
                                     input[i].value = '';
                                 }
                             }
